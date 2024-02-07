@@ -39,8 +39,8 @@ Pré-requisitos: Java 11
 # clonar repositório
 git clone https://github.com/juceliocoelho2022/DSListJavaSpringBoot
 
-# entrar na pasta do projeto back end
-cd backend
+# entrar na pasta do projeto DSListJavaSpringBoot
+ DSListJavaSpringBoot
 
 # executar o projeto
 ./mvnw spring-boot:run
