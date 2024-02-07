@@ -3,14 +3,16 @@ package com.jUCELIOCOELHO.DSListJavaSpringBoot.dto;
 
 import com.jUCELIOCOELHO.DSListJavaSpringBoot.entities.Game;
 import com.jUCELIOCOELHO.DSListJavaSpringBoot.projections.GameMinProjection;
+import lombok.Getter;
 
+@Getter
 public class GameMinDTO {
 
-    private Long id;
-    private String title;
-    private Integer year;
-    private String imgUrl;
-    private String shortDescription;
+    private final Long id;
+    private final String title;
+    private final Integer year;
+    private final String imgUrl;
+    private final String shortDescription;
 
     public GameMinDTO(Game entity) {
         id = entity.getId();
@@ -28,23 +30,4 @@ public class GameMinDTO {
         shortDescription = projection.getShortDescription();
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public String getShortDescription() {
-        return shortDescription;
-    }
 }

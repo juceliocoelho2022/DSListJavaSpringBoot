@@ -18,6 +18,10 @@ public class GameService {
     @Autowired
     private GameRepository gameRepository;
 
+    public GameService(GameRepository gameRepository) {
+        this.gameRepository = gameRepository;
+    }
+
     @Transactional(readOnly = true)
     public GameDTO findById(@PathVariable Long listId) {
         Game result = gameRepository.findById(listId).get();
